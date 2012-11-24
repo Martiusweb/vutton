@@ -27,9 +27,7 @@
 		echo ' | ' . sprintf( __( 'Page %s', 'vutton' ), max( $paged, $page ) );
 
 	?></title>
-<meta name="description" content="">
 <meta name="viewport" content="width=device-width">
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/bootstrap.css">
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 <?php wp_head(); ?>
