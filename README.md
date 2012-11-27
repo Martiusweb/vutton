@@ -16,5 +16,5 @@ Howto?
 ======
 
 Fork `twitter/bootstrap`, copy (and replace) the files from `vutton/bootstrap`
-into `twitter/bootstrap/less`, compile, append the result (`bootstrap.min.css`)
+into `twitter/bootstrap/less`, compile, append the result (`bootstrap.css`)
 in `styles.css`, you are mostly done, I guess.
