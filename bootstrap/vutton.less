@@ -11,6 +11,13 @@ License: WTFPL
 License URI: http://lmgtfy.com/?q=wtfpl
 */
 
+// TYPOGRAPHY
+// -----------------------------------------------------
+
+@import url('http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic');
+@import url('http://fonts.googleapis.com/css?family=Kaushan+Script');
+
+
 // don't forget the transitions :)
 //@import "variables.less"; /* in order to avoid syntax errors with vim */
 //@import "mixins.less"; /* in order to avoid syntax errors with vim */
@@ -18,7 +25,7 @@ License URI: http://lmgtfy.com/?q=wtfpl
 
 // Variables
 @headerLightColor: rgb(185, 94, 39);/*#E2DBC0;*/
-@lightBackground: @white;/*@whiteChocolate;*/
+@lightBackground: @blancDeBlanc;/*@whiteChocolate;*/
 @orangeChic: rgb(185, 94, 39);
 @separatorColor: #DEDEDE;
 @iconSpritePath:          "img/glyphicons-halflings.png";
@@ -27,9 +34,18 @@ License URI: http://lmgtfy.com/?q=wtfpl
 // Effets and mixins
 .doubleBorder(@color) {
     display: block;
-    border-top: 1px @color solid;
+    border-top: 2px @color solid;
     border-bottom: 1px @color solid;
-    height: 2px;
+    height: 3px;
+    content: "";
+}
+
+// Effets and mixins
+.doubleInversedBorder(@color) {
+    display: block;
+    border-top: 1px @color solid;
+    border-bottom: 2px @color solid;
+    height: 3px;
     content: "";
 }
 
@@ -60,7 +76,7 @@ div#main {
 // Right sidebar
 div#sidebar {
     padding-top: 2em;
-    color: rgb(236, 230, 197);
+    color: @blancDeBlanc;
     font-family: @altFontFamily;
 
     h1, h2, h3, h4, h5, h6 {
@@ -90,12 +106,12 @@ div#sidebar {
         padding-left: 20px;
         width: 100%;
         background-color: @bodyBackground;
-        color: lighten(@darkChocolate, 30%);
+        color: darken(@paleGold,10%);
         .transition(~"background-color .25s ease, color .25s ease");
     }
     a:hover {
-        color: @softChocolate;
-        background-color: lighten(@darkChocolate, 10%);
+        color: @champagneBeige;
+        background-color: darken(@paleGold, 20%);
         text-decoration: none;
     }
 }
@@ -104,7 +120,7 @@ div#sidebar {
 div#content {
     background: @lightBackground;
     .box-sizing(border-box);
-    border: 12px lighten(@darkChocolate, 8%) solid;
+    border: 12px lighten(@stretchLimo, 8%) solid;
     margin-bottom: 20px;
 
     header.page-header {
@@ -122,20 +138,23 @@ div#content {
 header#title {
     h1 {
         text-align: center;
+        font-family: @cursiveFontFamily;
         padding-top: 30px;
         margin-bottom: 8px;
-        font-weight: normal;
-
+        //font-weight: normal;
+        
+        
         > a {
-            text-transform: uppercase;
+            //text-transform: uppercase;
             font-size: 62px;
-            color: rgb(68, 68, 68);
-            letter-spacing: -2px;
+            color: @stretchLimo;
+            //letter-spacing: -2px;
             position: relative;
             z-index: 11;
-
+            text-shadow: 0.05em 0.05em lighten(@stretchLimo,60%);
+            
             &:hover { text-decoration: none; }
-            em { text-transform: lowercase; }
+            em { letter-spacing: -3px; }
         }
 
         /*&:before, &:after {*/
@@ -150,6 +169,7 @@ header#title {
     div#punchline {
         text-align: center;
         text-transform: uppercase;
+        color: lighten(@stretchLimo,20%);
 
         span {
             background: @lightBackground;
@@ -164,7 +184,7 @@ header#title {
             position: relative;
             top: 13px;
             z-index: 9;
-            .doubleBorder(@headerLightColor);
+            .doubleBorder(@frenchRoast);
             width: 95%;
         }
     }
@@ -176,7 +196,7 @@ footer#eop {
     margin: 2em auto 3em auto;
 
     &:before {
-        .doubleBorder(@softChocolate);
+        .doubleInversedBorder(@frenchRoast);
         margin: 3em auto;
     }
 
@@ -191,7 +211,7 @@ footer#eop {
             line-height: 1em;
             text-align: center;
             margin: 0;
-            padding-bottom: .2em;
+            padding-bottom: .5em;
         }
 
         p {
@@ -226,11 +246,11 @@ div#articles {
             margin: 0;
 
             a:link, a:active, a:visited {
-                color: @orangeChic;
+                color: @paleGold;
             }
 
             a:hover {
-                color: @textColor;
+                color: @champagneBeige;
                 text-decoration: none;
             }
         }
@@ -308,7 +328,7 @@ div#articles {
             text-transform: uppercase;
             color: lighten(@textColor, 10%);
             text-align: right;
-            background: lighten(@whiteChocolate, 4%);
+            background: @blancDeBlanc;
             padding: .5em;
 
             .entry-voter {
@@ -339,10 +359,10 @@ a {
 
 // Selection
 ::selection {
-	background: lighten(@pink, 25%);
+	background: @blancDeBlanc;
 }
 ::-moz-selection {
-	background: lighten(@pink, 25%);
+	background: @blancDeBlanc;
 }
 
 // 404
