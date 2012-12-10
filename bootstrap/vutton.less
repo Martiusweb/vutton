@@ -138,7 +138,7 @@ div#content {
 header#title {
     h1 {
         text-align: center;
-        font-family: @cursiveFontFamily;
+        font-family: @serifFontFamily;
         padding-top: 30px;
         margin-bottom: 8px;
         //font-weight: normal;
@@ -146,12 +146,12 @@ header#title {
         
         > a {
             //text-transform: uppercase;
-            font-size: 62px;
+            font-size: 70px;
             color: @stretchLimo;
-            //letter-spacing: -2px;
+            letter-spacing: -2px;
             position: relative;
             z-index: 11;
-            text-shadow: 0.05em 0.05em lighten(@stretchLimo,60%);
+            //text-shadow: 0.05em 0.05em lighten(@stretchLimo,60%);
             
             &:hover { text-decoration: none; }
             em { letter-spacing: -3px; }
@@ -239,11 +239,13 @@ div#articles {
         padding-top: 1em;
 
         h1 {
+            color: @paleGold;
             font-weight: normal;
             letter-spacing: -2px;
             font-size: 4em;
             line-height: .8em;
             margin: 0;
+            
 
             a:link, a:active, a:visited {
                 color: @paleGold;
