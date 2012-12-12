@@ -44,12 +44,12 @@
 		<?php endif; ?>
 
 		<footer class="entry-meta row-fluid">
-            <div class="entry-voter span6">
+            <?php /*<div class="entry-voter span6">
                 <ul>
                     <li><a href="#" class="btn btn-mini btn-info fb">Facebook</a></li>
                     <li><a href="#" class="btn btn-mini btn-info twitter">Twitter</a></li>
                 </ul>
-            </div>
+            </div> */ ?>
             <div class="span6">
 			    <?php $show_sep = false; ?>
 			    <?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
